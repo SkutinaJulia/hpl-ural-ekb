@@ -248,3 +248,14 @@ h1, h2, h3, p, li, a, span, b, label, figcaption, blockquote { -webkit-hyphens: 
 
 /* правка Юли: подсказка, что текст копируется (ВК, Telegram, MAX не принимают готовый текст по ссылке) */
 .s-send__hint { margin: 8px 2px 0; font-size: .8rem; line-height: 1.4; color: var(--c-ink-soft); }
+
+/* правка Юли 16.11: услуги в форме – каждая с новой строки (пк и телефон) */
+.s-widget .s-chips--col { flex-direction: column; flex-wrap: nowrap; }
+.s-widget .s-chips--col .s-chip--row { justify-content: flex-start; }
+
+/* правка Юли 16.11: Hpl – главное фото на пк выше: текст слева плотнее, заголовок уменьшает правки-hero.js (фото не ниже 360 px) */
+@media (min-width: 861px) {
+  .s-hero__text .s-lead { margin-top: 8px; }
+  .s-hero__text .s-ticks { margin-top: 10px; gap: 4px; }
+  .s-hero__photo { margin-top: 16px !important; }
+}
